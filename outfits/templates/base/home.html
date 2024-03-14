@@ -1,0 +1,15 @@
+{% extends 'main.html' %}
+
+{% block content %}
+  <h1>Clothes List</h1>
+  <ul>
+    {% for clothe in clothes %}
+      <li>
+        <h2>{{ clothe.name }}</h2>
+        <p>{{ clothe.description }}</p>
+        <p>Price: ${{ clothe.price }}</p>
+        <img src="{{ clothe.image.url }}" alt="{{ clothe.name }}" width="200" height="200">
+      </li>
+    {% endfor %}
+  </ul>
+{% endblock %}
